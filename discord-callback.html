@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Authentication Callback</title>
+</head>
+<body>
+    <h1>Authenticating...</h1>
+    <script src="discord_auth.js" type="module"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        if (code) {
+            handleDiscordAuth(code);
+        } else {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BO3 Mods - Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="navbar-logo">BO3 MODS</a>
+                <div class="navbar-links">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="wiki.html"><i class="fas fa-book"></i> Wiki</a>
+                    <a href="forum.html"><i class="fas fa-comments"></i> Forum</a>
+                    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    <a href="#" class="login-btn" onclick="loginWithDiscord()"><i class="fas fa-sign-in-alt"></i> Login with Discord</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <div class="profile-banner" id="profile-banner">
+            <button id="change-banner-btn" class="change-image-btn">Change Banner</button>
+        </div>
+        <div class="profile-header">
+            <div class="profile-avatar-container">
+                <img id="profile-avatar" src="" alt="User Avatar" class="profile-avatar">
+                <button id="change-avatar-btn" class="change-image-btn">Change Avatar</button>
+            </div>
+            <div class="profile-info">
+                <h2 id="username"></h2>
+                <p id="user-rank">Rank: <span id="rank"></span></p>
+                <p id="join-date">Joined: <span id="joined"></span></p>
+            </div>
+        </div>
+        <div class="profile-content">
+            <div class="profile-main">
+                <section class="user-bio">
+                    <h3>Bio</h3>
+                    <p id="user-bio"></p>
+                    <button id="edit-bio-btn" class="btn">Edit Bio</button>
+                </section>
+                <section class="user-activity">
+                    <h3>Recent Activity</h3>
+                    <ul id="activity-list"></ul>
+                </section>
+            </div>
+            <div class="profile-sidebar">
+                <section class="user-stats">
+                    <h3>Statistics</h3>
+                    <ul>
+                        <li><span>Total Posts:</span> <span id="total-posts">0</span></li>
+                        <li><span>Mods Created:</span> <span id="mods-created">0</span></li>
+                        <li><span>Reputation:</span> <span id="user-reputation">0</span></li>
+                    </ul>
+                </section>
+                <section class="user-mods">
+                    <h3>User's Mods</h3>
+                    <div id="user-mods-list" class="mod-grid"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BO3 Mods. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="discord_auth.js" type="module"></script>
+    <script src="forum.js" type="module"></script>
+    <script src="profile.js" type="module"></script>
+</body>
+</html>

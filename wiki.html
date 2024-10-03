@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BO3 Mods - Wiki</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="navbar-logo">BO3 MODS</a>
+                <div class="navbar-links">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="wiki.html"><i class="fas fa-book"></i> Wiki</a>
+                    <a href="forum.html"><i class="fas fa-comments"></i> Forum</a>
+                    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    <a href="#" class="login-btn" onclick="loginWithDiscord()"><i class="fas fa-sign-in-alt"></i> Login with Discord</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <aside class="sidebar">
+                <div class="wiki-categories">
+                    <h2><i class="fas fa-list"></i> Categories</h2>
+                    <ul>
+                        <li><a href="#getting-started">Getting Started</a></li>
+                        <li><a href="#modding-tools">Modding Tools</a></li>
+                        <li><a href="#scripting">Scripting</a></li>
+                        <li><a href="#asset-creation">Asset Creation</a></li>
+                        <li><a href="#troubleshooting">Troubleshooting</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="main-content">
+                <h1>BO3 Mods Wiki</h1>
+                <section id="getting-started">
+                    <h2>Getting Started</h2>
+                    <p>Learn the basics of modding Black Ops 3, including setting up your environment and understanding the modding workflow.</p>
+                    <a href="#" class="btn">Read More</a>
+                </section>
+                <section id="modding-tools">
+                    <h2>Modding Tools</h2>
+                    <p>Explore the various tools available for BO3 modding, including the Radiant level editor and Asset Property Editor.</p>
+                    <a href="#" class="btn">Read More</a>
+                </section>
+                <section id="scripting">
+                    <h2>Scripting</h2>
+                    <p>Dive into the world of GSC scripting and learn how to create custom game logic for your mods.</p>
+                    <a href="#" class="btn">Read More</a>
+                </section>
+                <!-- Add more sections as needed -->
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 BO3 Mods. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="discord_auth.js" type="module"></script>
+</body>
+</html>
