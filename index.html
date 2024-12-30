@@ -1,76 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BO3 Mods - Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BO3 Mods</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/49e5f1071b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="navbar-logo">BO3 MODS</a>
-                <div class="navbar-links">
-                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
-                    <a href="wiki.html"><i class="fas fa-book"></i> Wiki</a>
-                    <a href="forum.html"><i class="fas fa-comments"></i> Forum</a>
-                    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
-                    <a href="#" class="login-btn" onclick="loginWithDiscord()"><i class="fas fa-sign-in-alt"></i> Login with Discord</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <div class="container">
-        <main>
-            <aside class="sidebar">
-                <div class="latest-news">
-                    <h2><i class="fas fa-newspaper"></i> Latest News</h2>
-                    <ul id="news-list">
-                        <li><a href="#">New BO3 Mod Released: Zombie Overhaul</a></li>
-                        <li><a href="#">Community Event: Modding Workshop</a></li>
-                        <li><a href="#">Patch Notes: BO3 Update 1.32</a></li>
-                    </ul>
-                </div>
-            </aside>
-            <div class="main-content">
-                <h1>Welcome to BO3 Mods</h1>
-                <p>Discover, create, and share amazing mods for Call of Duty: Black Ops 3. Join our community of passionate modders and players!</p>
-                <div class="featured-mods">
-                    <h2>Featured Mods</h2>
-                    <div class="mod-grid">
-                        <div class="mod-card">
-                            <img src="path/to/mod1-image.jpg" alt="Mod 1">
-                            <h3>Custom Zombies Map</h3>
-                            <p>Experience a new challenge in this community-created zombies map.</p>
-                            <a href="#" class="btn">View Mod</a>
-                        </div>
-                        <div class="mod-card">
-                            <img src="path/to/mod2-image.jpg" alt="Mod 2">
-                            <h3>Weapon Pack</h3>
-                            <p>Add 20+ new weapons to your arsenal with this extensive weapon pack.</p>
-                            <a href="#" class="btn">View Mod</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+  <nav>
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="BO3 Mods Logo" class="logo-img">
+      BO3 Mods
     </div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="tutorials.html">Tutorials</a>
+      <a href="wiki.html">Wiki</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+  
+  <div class="hero">
+    <div class="container">
+      <h1>Welcome to BO3 Mods</h1>
+      <p class="subtitle">Master the art of Black Ops 3 modding</p>
+      <div class="cta-buttons">
+        <a href="tutorials.html" class="cta-button">Get Started</a>
+        <a href="wiki.html" class="cta-button secondary">Browse Wiki</a>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 BO3 Mods. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-discord"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-            </div>
+  <div class="features">
+    <div class="feature-card">
+      <img src="assets/bo3mods_gsc.png" alt="Scripting">
+      <h3>Scripting Guides</h3>
+      <p>Learn GSC scripting from basics to advanced techniques</p>
+    </div>
+    <div class="feature-card">
+      <img src="assets/bo3mods_map.png" alt="Mapping">
+      <h3>Map Creation</h3>
+      <p>Create your own custom zombies maps</p>
+    </div>
+    <div class="feature-card">
+      <img src="assets/bo3mods_tools.png" alt="Mod Tools">
+      <h3>Mod Tools</h3>
+      <p>Master the Black Ops 3 modding tools</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="tutorials.html">Tutorials</a>
+        <a href="wiki.html">Wiki</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Tutorials</h4>
+        <a href="#">Getting Started</a>
+        <a href="#">Scripting Basics</a>
+        <a href="#">Map Creation</a>
+        <a href="#">Advanced Topics</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Community</h4>
+        <a href="#"><i class="fab fa-discord"></i>Discord Server</a>
+        <a href="#"><i class="fab fa-github"></i>GitHub</a>
+        <a href="#"><i class="fab fa-youtube"></i>YouTube</a>
+        <a href="#"><i class="fab fa-steam"></i>Steam Workshop</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-discord"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-steam"></i></a>
         </div>
-    </footer>
-
-    <script src="discord_auth.js" type="module"></script>
+        <p>Join our community of modders!</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2024 BO3 Mods | Created with ❤️ by Debino</p>
+    </div>
+  </footer>
 </body>
 </html>
