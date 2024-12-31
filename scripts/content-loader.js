@@ -115,7 +115,7 @@ async function loadTemplateContent(contentType, filename) {
       .replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="content-image">');
 
     document.getElementById('content').innerHTML = text;
-    document.title = `${formatTitle(filename)} - BO3 Mods`;
+    document.title = `${formatTitle(filename)} - T7Mods`;
     
   } catch (error) {
     console.error('Error loading content:', error);
