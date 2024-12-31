@@ -10,15 +10,11 @@ router.get('/api/list-content', async (req, res) => {
     const contentDir = path.join(__dirname, '../content', type);
     
     const files = await fs.readdir(contentDir);
-    const mdFiles = files.filter(file => file.endsWith('.md'));
+    const txtFiles = files.filter(file => file.endsWith('.txt'));
     
-    const fileDetails = await Promise.all(mdFiles.map(async file => {
-      const content = await fs.readFile(path.join(contentDir, file), 'utf8');
-      const titleMatch = content.match(/^#\s+(.+)$/m);
-      return {
-        name: file.replace('.md', ''),
-        title: titleMatch ? titleMatch[1] : file.replace('.md', '')
-      };
+    const fileDetails = txtFiles.map(file => ({
+      name: file.replace('.txt', ''),
+      title: formatTitle(file.replace('.txt', ''))
     }));
     
     res.json(fileDetails);
@@ -26,5 +22,12 @@ router.get('/api/list-content', async (req, res) => {
     res.status(500).json({ error: 'Failed to list content' });
   }
 });
+
+function formatTitle(filename) {
+  return filename
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
 
 module.exports = router; 

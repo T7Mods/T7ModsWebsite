@@ -2,17 +2,17 @@
  
 ## Open your mapname.gsc and find the following line:
 
-> zm_usermap::main();
+// zm_usermap::main();
 
 ## Anywhere underneath that, but still within function main(), insert the following line:
 
-> level.pack_a_punch_camo_index = 138;
+// level.pack_a_punch_camo_index = 138;
 
 ## You can change 138 to any of the available Pack a Punch Camos from the Weapon Camo Index.
 
 ## The camo index can be found below:
 
->/
+/*
 1 = Jungle tech
 2 = Ash
 3 = Flectarn
@@ -83,8 +83,8 @@
 136 = Soviet Blue
 137 = Honeycomb
 138 = Watermelon
-/>
+*/
 
 
-## That's it!
+## That's all, Happy Modding!
 

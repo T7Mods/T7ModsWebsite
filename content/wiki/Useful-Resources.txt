@@ -1,17 +1,17 @@
 # Useful Resources
 
 ## Tools
->/
-Greyhound [COD Asset extraction tool] - https://github.com/Scobalula/Greyhound/releases
-/>
+/*
+Greyhound [COD Asset extraction tool] - <link>https://github.com/Scobalula/Greyhound/releases</link>
+*/
 ## Assets
->/
-Devraw [Asset sharing platform] - https://www.devraw.net/
-Modme [Asset sharing forun] - https://modme.co/
-/>
+/*
+Devraw [Asset sharing platform] - <link>https://www.devraw.net/</link>
+Modme [Asset sharing forun] - <link>https://modme.co/</link>
+*/
 ## Community
->/
-Offical ModTools discord - https://discord.gg/SQa2zefkXP
-Devraw discord - https://discord.com/invite/83mHWAakDc
-ZGC discord [Zombie Gaming Community] - https://discord.gg/RQyYacjhpD
-/>
+/*
+Offical ModTools discord - <link>https://discord.gg/SQa2zefkXP</link>
+Devraw discord - <link>https://discord.com/invite/83mHWAakDc</link>
+ZGC discord [Zombie Gaming Community] - <link>https://discord.gg/RQyYacjhpD</link>
+*/
