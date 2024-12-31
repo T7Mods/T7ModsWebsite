@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wiki - Black Ops 3 Modding Wiki</title>
+  <title>Wiki - BO3 Mods</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/49e5f1071b.js" crossorigin="anonymous"></script>
@@ -12,7 +12,7 @@
   <nav>
     <div class="logo">
       <img src="assets/images/logo.png" alt="BO3 Wiki Logo" class="logo-img">
-      BO3 Modding Wiki
+      BO3 Mods
     </div>
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -25,11 +25,7 @@
   <div class="sidebar">
     <h2>Wiki Categories</h2>
     <div class="tutorial-links">
-      <a href="wiki/scripting.md">Scripting Reference</a>
-      <a href="wiki/weapons.md">Weapon Modding</a>
-      <a href="wiki/mapping.md">Map Creation</a>
-      <a href="wiki/animations.md">Animation Guide</a>
-      <a href="wiki/audio.md">Audio Implementation</a>
+      <!-- Links will be loaded dynamically -->
     </div>
   </div>
 
@@ -39,31 +35,31 @@
     
     <div class="wiki-grid">
       <div class="wiki-card">
-        <img src="images/scripting.jpg" alt="Scripting">
+        <img src="assets/bo3mods_gsc.png" alt="Scripting">
         <h3>Scripting Reference</h3>
         <p>Complete GSC scripting documentation and examples.</p>
-        <a href="wiki/scripting.md" class="wiki-link">Learn More →</a>
+        <a href="template.html?type=wiki&file=scripting" class="wiki-link">Learn More →</a>
       </div>
       
       <div class="wiki-card">
-        <img src="images/weapons.jpg" alt="Weapons">
+        <img src="assets/bo3mods_weapons.png" alt="Weapons">
         <h3>Weapon Modding</h3>
         <p>Learn how to create and modify weapons.</p>
-        <a href="wiki/weapons.md" class="wiki-link">Learn More →</a>
+        <a href="template.html?type=wiki&file=weapons" class="wiki-link">Learn More →</a>
       </div>
       
       <div class="wiki-card">
-        <img src="images/mapping.jpg" alt="Mapping">
+        <img src="assets/bo3mods_map.png" alt="Mapping">
         <h3>Map Creation</h3>
         <p>Detailed guides for creating custom maps.</p>
-        <a href="wiki/mapping.md" class="wiki-link">Learn More →</a>
+        <a href="template.html?type=wiki&file=mapping" class="wiki-link">Learn More →</a>
       </div>
       
       <div class="wiki-card">
-        <img src="images/animations.jpg" alt="Animations">
+        <img src="assets/bo3mods_tools.png" alt="Animations">
         <h3>Animation Guide</h3>
         <p>Character and weapon animation tutorials.</p>
-        <a href="wiki/animations.md" class="wiki-link">Learn More →</a>
+        <a href="template.html?type=wiki&file=animations" class="wiki-link">Learn More →</a>
       </div>
     </div>
   </div>
@@ -107,8 +103,10 @@
     </div>
     
     <div class="footer-bottom">
-      <p>© 2024 BO3 Modding Wiki | Created with ❤️ by Your Name</p>
+      <p>© 2024 BO3 Modding Wiki | Created with ❤️ by Debino</p>
     </div>
   </footer>
+
+  <script src="scripts/content-loader.js"></script>
 </body>
 </html> 

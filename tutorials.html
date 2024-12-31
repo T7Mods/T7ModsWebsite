@@ -11,8 +11,8 @@
 <body>
   <nav>
     <div class="logo">
-      <img src="assets/images/logo.png" alt="BO3 Wiki Logo" class="logo-img">
-      BO3 Modding Wiki
+      <img src="assets/images/logo.png" alt="BO3 Mods Logo" class="logo-img">
+      BO3 Mods
     </div>
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -25,11 +25,7 @@
   <div class="sidebar">
     <h2>Tutorial Categories</h2>
     <div class="tutorial-links">
-      <a href="tutorials/getting-started.md">Getting Started with BO3 Modding</a>
-      <a href="tutorials/basic-scripting.md">Basic Scripting Tutorial</a>
-      <a href="tutorials/custom-weapons.md">Creating Custom Weapons</a>
-      <a href="tutorials/map-editing.md">Map Editing Basics</a>
-      <a href="tutorials/advanced-scripting.md">Advanced Scripting Techniques</a>
+      <!-- Links will be loaded dynamically -->
     </div>
   </div>
 
@@ -42,28 +38,28 @@
         <img src="assets/bo3mods_tools.png" alt="Getting Started">
         <h3>Getting Started</h3>
         <p>New to modding? Start here with our beginner's guide.</p>
-        <a href="tutorials/getting-started.md" class="tutorial-link">Start Learning →</a>
+        <a href="template.html?type=tutorial&file=getting-started" class="tutorial-link">Start Learning →</a>
       </div>
       
       <div class="tutorial-card">
         <img src="assets/bo3mods_gsc.png" alt="Scripting">
         <h3>Basic Scripting</h3>
         <p>Learn the fundamentals of GSC scripting.</p>
-        <a href="tutorials/basic-scripting.md" class="tutorial-link">Start Learning →</a>
+        <a href="template.html?type=tutorial&file=basic-scripting" class="tutorial-link">Start Learning →</a>
       </div>
       
       <div class="tutorial-card">
         <img src="assets/bo3mods_weapons.png" alt="Weapons">
         <h3>Custom Weapons</h3>
         <p>Create your own custom weapons from scratch.</p>
-        <a href="tutorials/custom-weapons.md" class="tutorial-link">Start Learning →</a>
+        <a href="template.html?type=tutorial&file=custom-weapons" class="tutorial-link">Start Learning →</a>
       </div>
       
       <div class="tutorial-card">
         <img src="assets/bo3mods_map.png" alt="Mapping">
         <h3>Map Editing</h3>
         <p>Learn to create and edit custom maps.</p>
-        <a href="tutorials/map-editing.md" class="tutorial-link">Start Learning →</a>
+        <a href="template.html?type=tutorial&file=map-editing" class="tutorial-link">Start Learning →</a>
       </div>
     </div>
   </div>
@@ -107,8 +103,9 @@
     </div>
     
     <div class="footer-bottom">
-      <p>© 2024 BO3 Modding Wiki | Created with ❤️ by Your Name</p>
+      <p>© 2024 BO3 Mods | Created with ❤️ by Debino</p>
     </div>
   </footer>
+  <script src="scripts/content-loader.js"></script>
 </body>
 </html>
