@@ -1,17 +1,20 @@
+--December 31, 2024--
+
 # Change Pack a Punch Camo
  
-## Open your mapname.gsc and find the following line:
+### Open your mapname.gsc and find the following line:
 
 // zm_usermap::main();
 
-## Anywhere underneath that, but still within function main(), insert the following line:
+### Anywhere underneath that, but still within function main(), insert the following line:
 
-// level.pack_a_punch_camo_index = 138;
+// level.pack_a_punch_camo_index = 133;
 
-## You can change 138 to any of the available Pack a Punch Camos from the Weapon Camo Index.
+### You can change 133 to any of the available Pack a Punch Camos from the Weapon Camo Index.
 
-## The camo index can be found below:
+### The camo index can be found below:
 
+# Weapon Camo Index
 /*
 1 = Jungle tech
 2 = Ash

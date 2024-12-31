@@ -2,9 +2,17 @@
 
 ## = SUBHEADER
 
+### = SUBSUBHEADER or normal text
+
 // = CODE COMMENT
 
 /* = BLOCK COMMENT */
 
-<link> = LINK   
+Here's a download link:
+<dl>https://example.com/file.zip</dl>
 
+Here's a visit link:
+<visit>https://example.com</visit>
+
+And here's an image:
+![Description](path/to/image.jpg)

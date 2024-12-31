@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (contentType && filename) {
     await loadTemplateContent(contentType, filename);
   }
+
+  // Remove skeleton loaders when content is loaded
+  document.querySelectorAll('.skeleton').forEach(skeleton => {
+    skeleton.remove();
+  });
 });
 
 async function loadSidebarLinks(activeType, activeFile) {
@@ -76,11 +81,18 @@ async function loadTemplateContent(contentType, filename) {
     
     let text = await response.text();
     
-    // Process the custom markdown
+    // Just remove frontmatter without adding timestamp
+    text = text.replace(/^---[\s\S]*?---\s*\n+/, '');
+    
+    // Process the rest of the markdown
     text = text
       // Handle headers first
       .replace(/^# (.+)$/gm, '<h1>$1</h1>')
       .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+      .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+      
+      // Handle double dashes
+      .replace(/--(.+?)--/g, '<span class="italic-text">$1</span>')
       
       // Handle code comments
       .replace(/^\/\/ (.+)$/gm, '<code>$1</code>')
@@ -93,8 +105,14 @@ async function loadTemplateContent(contentType, filename) {
         return `<pre class="block-comment">${lines.join('\n')}</pre>`;
       })
       
-      // Handle links with stylized VISIT button
-      .replace(/<link>(.*?)<\/link>/g, '<a href="$1" class="contact-link">Visit →</a>');
+      // Handle download buttons
+      .replace(/<dl>(.*?)<\/dl>/g, '<a href="$1" class="download-link">Download <i class="fas fa-download"></i></a>')
+      
+      // Handle visit buttons
+      .replace(/<visit>(.*?)<\/visit>/g, '<a href="$1" class="visit-link">Visit <i class="fas fa-external-link-alt"></i></a>')
+      
+      // Handle images and gifs
+      .replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="content-image">');
 
     document.getElementById('content').innerHTML = text;
     document.title = `${formatTitle(filename)} - BO3 Mods`;
