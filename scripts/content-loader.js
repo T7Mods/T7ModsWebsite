@@ -21,23 +21,22 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function loadSidebarLinks(activeType, activeFile) {
   try {
     let sidebarContent = '';
-    const contentTypes = ['docs', 'wiki', 'tutorials'];
+    const types = ['docs', 'wiki', 'tutorials'];
     const basePath = window.location.pathname.includes('template.html') ? '../' : '';
 
-    for (const type of contentTypes) {
+    for (const type of types) {
       try {
-        const response = await fetch(`${basePath}content/${type}/`);
+        // Fetch the index file for this content type
+        const response = await fetch(`${basePath}content/${type}/index.txt`);
         if (!response.ok) continue;
-        
-        const html = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const files = Array.from(doc.querySelectorAll('a'))
-          .filter(a => a.href.endsWith('.txt'))
-          .map(a => ({
-            name: a.href.split('/').pop().replace('.txt', ''),
-            title: formatTitle(a.href.split('/').pop().replace('.txt', ''))
-          }));
+
+        const indexContent = await response.text();
+        const files = indexContent.split('\n')
+          .filter(line => line.trim())
+          .map(line => {
+            const [name, title] = line.split(':');
+            return { name: name.trim(), title: title.trim() };
+          });
 
         if (files.length > 0) {
           sidebarContent += `
@@ -49,8 +48,7 @@ async function loadSidebarLinks(activeType, activeFile) {
           `;
         }
       } catch (error) {
-        console.log(`No content found for ${type}`);
-        continue;
+        console.error(`Error loading ${type} index:`, error);
       }
     }
 
