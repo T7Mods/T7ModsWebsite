@@ -14,9 +14,11 @@ permalink: /404.html
   <script>
     const path = window.location.pathname;
     
-    // Only redirect for root path
-    if (path === '/') {
+    // Only redirect for specific paths that need .html
+    if (path === '/' || path === '/index') {
       window.location.replace('/index.html');
+    } else if (path === '/docs' || path === '/template') {
+      window.location.replace(path + '.html');
     }
   </script>
 </head>
