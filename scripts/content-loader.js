@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const contentType = urlParams.get('type');
   const filename = urlParams.get('file');
   
-  if (window.location.pathname.includes('docs') || 
-      window.location.pathname.includes('template')) {
+  // Check if we're on a documentation page
+  if (window.location.pathname.includes('/docs') || 
+      window.location.pathname.includes('/template')) {
     await loadSidebarLinks(contentType, filename);
   }
   
@@ -44,7 +45,7 @@ async function loadSidebarLinks(activeType, activeFile) {
           sidebarContent += `
             <h2>${formatTitle(type)}</h2>
             ${files.map(file => `
-              <a href="/template.html?type=${type}&file=${file.name}" 
+              <a href="/template?type=${type}&file=${file.name}" 
                  class="${activeType === type && activeFile === file.name ? 'active' : ''}">${file.title}</a>
             `).join('')}
           `;
