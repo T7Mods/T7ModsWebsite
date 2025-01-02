@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const contentType = urlParams.get('type');
   const filename = urlParams.get('file');
   
-  if (window.location.pathname.includes('docs.html') || 
-      window.location.pathname.includes('template.html')) {
+  if (window.location.pathname.includes('/docs') || 
+      window.location.pathname.includes('/template')) {
     await loadSidebarLinks(contentType, filename);
   }
   
