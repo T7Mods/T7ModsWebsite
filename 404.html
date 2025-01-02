@@ -1,3 +1,6 @@
+---
+permalink: /404.html
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +11,16 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    const path = window.location.pathname;
+    
+    // Don't redirect if already has .html
+    if (!path.endsWith('.html') && path !== '/404.html') {
+      // Handle root path
+      const redirectPath = path === '/' ? '/index.html' : path + '.html';
+      window.location.replace(redirectPath + window.location.search);
+    }
+  </script>
 </head>
 <body class="error-body">
   <nav>
@@ -16,10 +29,10 @@
       T7Mods
     </div>
     <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="docs.html">Documentation</a>
-      <a href="contact.html">Community</a>
-      <a href="about.html">About</a>
+      <a href="/">Home</a>
+      <a href="/docs">Documentation</a>
+      <a href="/contact">Community</a>
+      <a href="/about">About</a>
     </div>
   </nav>
 
@@ -38,8 +51,8 @@
       </div>
       <div class="error-message">PAGE NOT FOUND</div>
       <div class="error-actions">
-        <a href="index.html" class="error-button primary">HOME</a>
-        <a href="docs.html" class="error-button">DOCUMENTATION</a>
+        <a href="/" class="error-button primary">HOME</a>
+        <a href="/docs" class="error-button">DOCUMENTATION</a>
       </div>
     </div>
   </div>
