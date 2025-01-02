@@ -26,9 +26,11 @@ async function loadSidebarLinks(activeType, activeFile) {
 
     for (const type of types) {
       try {
-        // Fetch the index file for this content type
-        const response = await fetch(`${basePath}content/${type}/index.txt`);
-        if (!response.ok) continue;
+        const response = await fetch(`/content/${type}/index.txt`);
+        if (!response.ok) {
+          console.log(`No index file found for ${type}`);
+          continue;
+        }
 
         const indexContent = await response.text();
         const files = indexContent.split('\n')

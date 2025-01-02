@@ -13,21 +13,10 @@ permalink: /404.html
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script>
     const path = window.location.pathname;
-    const repo = ''; // Leave empty if using custom domain
     
-    // Don't redirect if it's already the 404 page
-    if (path !== '/404.html') {
-      // Check if the path exists with .html extension
-      fetch(path + '.html')
-        .then(response => {
-          if (response.ok) {
-            window.location.replace(path + '.html');
-          }
-        })
-        .catch(() => {
-          // If fetch fails, stay on 404 page
-          console.error('Page not found:', path);
-        });
+    // Only redirect for root path
+    if (path === '/') {
+      window.location.replace('/index.html');
     }
   </script>
 </head>
