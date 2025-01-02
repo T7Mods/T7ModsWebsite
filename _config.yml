@@ -1,0 +1,5 @@
+plugins:
+  - jekyll-redirect-from
+
+# Optional: Set your base URL if using a custom domain
+# baseurl: "" 

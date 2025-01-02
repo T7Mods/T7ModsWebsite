@@ -22,7 +22,7 @@ async function loadSidebarLinks(activeType, activeFile) {
   try {
     let sidebarContent = '';
     const types = ['docs', 'wiki', 'tutorials'];
-    const basePath = window.location.pathname.includes('template.html') ? '../' : '';
+    const basePath = window.location.pathname.includes('/template') ? '/' : '';
 
     for (const type of types) {
       try {
@@ -42,7 +42,7 @@ async function loadSidebarLinks(activeType, activeFile) {
           sidebarContent += `
             <h2>${formatTitle(type)}</h2>
             ${files.map(file => `
-              <a href="${basePath}template.html?type=${type}&file=${file.name}" 
+              <a href="/template?type=${type}&file=${file.name}" 
                  class="${activeType === type && activeFile === file.name ? 'active' : ''}">${file.title}</a>
             `).join('')}
           `;
@@ -70,8 +70,8 @@ function formatTitle(filename) {
 
 async function loadTemplateContent(contentType, filename) {
   try {
-    const basePath = window.location.pathname.includes('template.html') ? '../' : '';
-    const response = await fetch(`${basePath}content/${contentType}/${filename}.txt`);
+    const basePath = window.location.pathname.includes('/template') ? '/' : '';
+    const response = await fetch(`/content/${contentType}/${filename}.txt`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
