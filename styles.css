@@ -406,12 +406,41 @@ footer {
   width: 100%;
   background: var(--bg-light);
   border-top: 1px solid var(--border-color);
-  padding: 1rem;
-  text-align: center;
+  padding: 0.5rem;
 }
 
 .footer-bottom {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   color: var(--text-muted);
+}
+
+.footer-bottom p {
+  grid-column: 2;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-discord {
+  grid-column: 3;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-discord:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    padding: 0.5rem;
+  }
 }
 
 /* Responsive Design */
